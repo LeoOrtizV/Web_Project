@@ -1,17 +1,20 @@
-/* Google-Fonts */
+/* Google-Fonts 
+Se importa la fuente "Poppins" */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-padding-top: 2rem;
-    list-style: none;
-    text-decoration: none;
-    scroll-behavior: smooth;
-}
-/* Variables */
 
+/* Aplica estilos globales a todos los elementos */
+*{
+    font-family: "Poppins", sans-serif;  /*Establece una fuente principal*/
+    margin: 0; /*Elimina márgenes*/
+    padding: 0; /*Elimina el relleno*/
+    box-sizing: border-box; /*Asegura que el tamaño de los elementos incluya el padding y el borde*/
+    scroll-padding-top: 2rem; /* Ajusta el espaciado superior al hacer scroll */
+    list-style: none; /* Elimina los estilos de lista predeterminados */
+    text-decoration: none; /* Elimina decoraciones de texto, como subrayados en enlaces */
+    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+}
+
+/* Variables */
 :root{
     --main-color: #ff7c03;
     --main-light-color: #ff8b1f;
@@ -21,56 +24,60 @@
 }
 
 /* Custom Scroll Bar */
-
 html::-webkit-scrollbar{
-    width: 0.5rem;
-    background: #474040;
+    width: 0.5rem; /* Ancho de la barra de desplazamiento */
+    background: #474040; /* Color de fondo de la barra */
 }
 html::-webkit-scrollbar-thumb{
-    border-radius: 2rem;
-    background: var(--text-color);
+    border-radius: 2rem; /* Redondea el scrollbar */
+    background: var(--text-color); /* Color del scrollbar */
 }
 
+/* Ajuste global para imágenes */
 img {
-    width: 100%;
+    width: 100%; /* Se asegura de que las imágenes ocupen el ancho máximo disponible */
 }
+/* Configuración del cuerpo del documento */
 body{
-    color: var(--text-color);
+    color: var(--text-color); /* Aplica color */
 }
+/*Añade un relleno superior e inferior a todas las secciones para mejorar el espaciado*/
 section{
     padding: 4rem 0 2rem;
 }
+/* Contenedor centralizado con ancho máximo */
 .container{
     max-width: 938px;
     margin-left: auto;
     margin-right: auto;
 }
+/* Estilos para el encabezado (header) */
 header{
-    display: block;
-    width: 100%;
-    position: fixed;
+    display: block;/* Se asegura de que el header se comporte como un bloque*/
+    width: 100%; 
+    position: fixed;/* Fija el header en la parte superior, manteniéndolo visible incluso al hacer scroll */
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 100; /* Se asegura de que esté por encima de otros elementos */
 }
-
+/* Agrega sombra al header cuando se desplaza */
 header.shadow{
     background: var(--bg-color);
     box-shadow: 2px 2px 4px rgb(15 54 55 / 10%);
-    transition: 0.5s;
+    transition: 0.5s; /* Suaviza la transición cuando el efecto de sombra aparece o desaparece */
 }
-
+/* Diseño del menú de navegación */
 .nav{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between; /* Distribuye los elementos dejando espacio entre ellos */
     padding: 20px 0;
 }
-
+/* Ajuste del logo */
 .logo img{
     width: 70px;
 }
-
+/* Define un contenedor flexible para los enlaces de navegación */
 .navbar{
     display: flex;
     column-gap: 2rem;
@@ -80,45 +87,45 @@ header.shadow{
     position:  relative;
     color: var(--text-color);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 500; /* Aplica un peso de fuente medio para resaltar los enlaces */
 }
-
+/* Aplica estilos cuando el usuario pasa el cursor sobre el enlace o cuando está activo */
 .navbar a:hover, 
 .navbar .active{
     color: var(--main-color)
 }
-
+/* Estilos para los iconos en la navegación */
 .nav-icons{
     display: flex;
-    column-gap: 1rem;
+    column-gap: 1rem;/* Agrega un espacio de 1rem entre cada icono */
 }
 
 .nav-icons .bx{
     font-size: 24px;
     color: var(--text-color);
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor a un puntero para indicar que son interactivos */
 }
-
+/* Cambio de color al pasar el cursor sobre los iconos */
 .nav-icons .bx:hover{
     color: var(--main-color);
 }
-
+/* Icono del menú (visible solo en dispositivos móviles) */
 #menu-icon{
     display: none;
 }
-
+/* Contenedor principal del carrito */
 .cart{
     position: relative;
 }
-
+/* Estilo para el elemento <span> dentro de .cart */
 .cart span{
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;/* Centra el contenido horizontalmente */
     top: -10px;
     right: -8px;
-    font-size: 0.6rem;
+    font-size: 0.6rem; /* Establece el tamaño de la fuente en 0.6 veces el tamaño base */
     height: 15px;
     width: 15px;
     background: var(--main-color);
@@ -128,7 +135,7 @@ header.shadow{
 }
 
 /* Home */
-
+/* Estilos para el contenedor principal de la página */
 .home{
     max-width: 1300px;
     margin: auto;
@@ -137,49 +144,50 @@ header.shadow{
     align-items: center;
     background: var(--container-color);
 }
-
+/* Estilos para el contenedor interior de la sección */
 .home-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
 }
-
+/* Estilos para el encabezado dentro del contenedor de texto */
 .home-text h1{
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* Establece el tamaño de la fuente del título a 2.4rem */
 }
-
+/* Estilos para el párrafo dentro del contenedor de texto */
 .home-text p{
     font-size: 0.938rem;
     margin: 0.5rem 0 1.4rem;
 }
-
+/* Estilos para el botón */
 .btn{
     padding: 13px 26px;
     background: var(--main-color);
     color: var(--bg-color);
-    font-weight: 400;
+    font-weight: 400;/* Define el peso de la fuente como 400 (normal) */
     border-radius: 0.5rem;
 }
-
+/* Efecto hover para el botón */
 .btn:hover{
     background: var(--main-light-color);
 }
-
+/* Estilos para el encabezado */
 .heading{
     text-align: center;
     margin-bottom: 2rem;
 }
-
+/* Subrayado en el <span> dentro del encabezado */
 .heading span{
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);/* Aplica una línea en la parte inferior con el color principal */
 }
-
+/* Estilos para el contenedor de elementos destacados */
 .featured-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-    gap: 1.5rem;
+    display: grid; /* Usa el modelo de rejilla (grid) */
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto)); /* Crea columnas dinámicas con un tamaño mínimo de 17rem */
+    gap: 1.5rem; /* Añade un espacio de 1.5rem entre las celdas */
 }
+/* Estilos para las cajas dentro del contenedor destacado */
 .featured-container .box{
     display: flex;
     align-items: center;
@@ -187,63 +195,64 @@ header.shadow{
     padding: 15px;
     background-color: var(--container-color);
     border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
+    overflow: hidden;/* Oculta cualquier contenido que se salga fuera de los bordes */
+    box-shadow: 1px 2px 4px rgb(15 54 55 / 10%); /* Aplica una sombra suave a la caja */
 }
-
+/* Estilos para las imágenes dentro de las cajas destacadas */
 .featured-container .box img{
     width: 180px;
-    object-fit: contain;
-    object-position: center;
+    object-fit: contain;/* Ajusta la imagen dentro del contenedor sin recortarla */
+    object-position: center;/* Centra la imagen dentro de su contenedor */
 }
-
+/* Efecto hover para las imágenes dentro de las cajas destacadas */
 .featured-container .box img:hover{
-    transform: scale(1.1);
+    transform: scale(1.1); /* Amplía la imagen al 110% cuando se pasa el cursor */
     transition: 0.5s;
 }
-
+/* Estilos para el texto dentro de las cajas destacadas */
 .featured-container .box .text h2{
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
-
+/* Estilos para los enlaces dentro de las cajas destacadas */
 .featured-container .box .text a{
     font-size: 0.9rem;
     color:var(--text-color);
 }
-
+/* Estilos para el contenedor (shop-container) */
 .shop-container{
-    display: grid;
+    display: grid;/* Usa el modelo de rejilla */
     grid-template-columns: repeat(auto-fit, minmax(280px,auto));
     gap: 2rem;
 }
-
+/* Estilos para las cajas */
 .shop-container .box{
     position: relative;
     padding: 10px;
     border-radius: 0.5rem;
     box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
 }
+/* Estilos para las imágenes */
 .shop-container .box img{
     width: 100%;
     height: 250px;
-    object-fit: contain;
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortarla */
     object-position: center;
     background: var(--container-color);
     border-radius: 0.5rem;
 }
-
+/* Estilos para el título */
 .shop-container .box h2{
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
-
+/* Estilos para el precio */
 .shop-container .box span{
-    font-size: 1rem;
+    font-size: 1rem; /* Define el tamaño de la fuente */
     font-weight: 500;
     color: var(--main-color);
 }
-
+/* Estilos para el icono de compra*/
 .shop-container .box .bx{
     position: absolute;
     bottom: 1rem;
@@ -254,109 +263,109 @@ header.shadow{
     color: var(--bg-color);
     border-radius: 0.5rem; 
 }
-
+/* Efecto hover para el icono de compra */
 .shop-container .box .bx:hover{
     background-color: var(--main-light-color);
 }
-
+/* Estilos para el contenedor (newsletter) */
 .newsletter{
     display: grid;
-    justify-items: center;
+    justify-items: center; /* Centra los elementos dentro de la rejilla */
 }
-
+/* Estilos para el formulario */
 .newsletter form{
     margin-top: 2rem;
     display: flex;
     background: var(--container-color);
     padding: 10px;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem; /* Bordes redondeados de 0.5rem */
 }
-
+/* Estilos para el campo de correo dentro del formulario */
 .newsletter form .email-box {
     width: 250px;
 }
-
+/* Estilos para los campos de entrada dentro del formulario */
 .newsletter form input {
     border: none;
-    outline: none;
-    background: none;
+    outline: none; /* Elimina el contorno */
+    background: none; /* Elimina el fondo */
     color: var(--text-color);
     font-size: 1rem;
 }
-
+/* Estilos para el botón dentro del formulario */
 .newsletter form .btn{
     background: var(--main-color);
     color: var(--bg-color);
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
     cursor: pointer;
 }
-
+/* Efecto hover para el botón del formulario */
 .newsletter form .btn:hover{
     background: var(--main-light-color);
 }
-
+/* Estilos para el pie de página */
 .footer{
-    display: flex;
+    display: flex;/* Usa Flexbox para organizar los elementos */
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1rem; /* Añade un espacio de 1rem entre los elementos */
 }
-
+/* Estilos para el logo en el pie de página */
 .footer .logo{
     margin-bottom: 1rem;
 }
-
+/* Estilos para los contenedores dentro del pie de página */
 .footer-box{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organiza los elementos en columna */
 }
-
+/* Estilos para los enlaces sociales */
 .social{
     display: flex;
     align-items: center;
 }
-
+/* Estilos para los enlaces dentro de .social */
 .social a{
-    font-size: 24px;
+    font-size: 24px; /* Establece el tamaño de la fuente */
     margin-right: 1rem;
     color:var(--text-color)
 }
-
+/* Efecto hover para los enlaces sociales */
 .social a:hover{
-    transform: translateY(-4px);
+    transform: translateY(-4px);/* Mueve el enlace ligeramente hacia arriba */
     transition: 0.4s;
 }
-
+/* Estilos para los títulos dentro de .footer-box */
 .footer-box h3{
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
-
+/* Estilos para los enlaces y párrafos dentro de .footer-box */
 .footer-box a, 
 .footer p{
     color: var(--text-color);
     margin-bottom: 10px;
 }
-
+/* Efecto hover para los enlaces dentro de .footer-box */
 .footer-box a:hover{
     color:var(--main-light-color);
 }
-
+/* Estilos para el texto de derechos de autor */
 .copyright{
     padding: 25px;
     text-align: center;
 }
 
 /*Making Responsive */
-
+/* Estilos responsivos para diferentes tamaños de pantalla */
 @media(max-width: 1080px){
     .container{
         margin-left: 1rem;
         margin-right: 1rem;
     }
 }
-
+/* Media query para pantallas con un ancho máximo de 991px */
 @media(max-width: 991px){
     .nav{
         padding: 15px 20px;
@@ -368,13 +377,13 @@ header.shadow{
         font-size: 2.1rem;
     }
 }
-
+/* Media query para pantallas con un ancho máximo de 768px */
 @media(max-width: 768px){
     .nav{
         padding: 10px 0;
     }
     #menu-icon{
-        display: initial;
+        display: initial; /* Muestra el icono del menú */
     }
     .navbar{
         position: absolute;
@@ -385,45 +394,45 @@ header.shadow{
         display: flex;
         flex-direction: column;
         background-color: var(--bg-color);
-        row-gap: 0.5rem;
+        row-gap: 0.5rem;/* Añade espacio entre los elementos */
         text-align: left;
         box-shadow: 2px 2px 15px rgb(15 54 55 / 15%);
         transition: 0.3s;
     }
     .navbar a{
-        display: block;
+        display: block;/* Hace que los enlaces ocupen toda la fila */
         padding: 15px;
     }
     .navbar.active{
-        right: 0;
+        right: 0;/* Muestra la barra de navegación */
     }
     .home-text h1{
-        font-size: 2rem;
+        font-size: 2rem;/* Ajusta el tamaño del título */
     }
     .heading h2{
         font-size: 1.4rem;
     }
     .shop-container{
-        grid-template-columns:repeat(auto-fit, minmax(220px, auto)) ;
+        grid-template-columns:repeat(auto-fit, minmax(220px, auto)) ;/* Ajusta las columnas */
     }
 }
-
+/* Media query para pantallas con un ancho máximo de 672px */
 @media (max-width:672px) {
     .home-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Organiza el contenido en una sola columna */
     }
     .home-text{
-        order: 2;
+        order: 2; /* Cambia el orden de los elementos */
     }
     .footer{
         display: grid;
-        grid-template-columns:repeat(auto-fit, minmax(220px, auto)) ;
+        grid-template-columns:repeat(auto-fit, minmax(220px, auto)); /* Ajusta las columnas del pie de página */
     }
     .newsletter form .email-box{
-        width: 180px;
+        width: 180px; /* Ajusta el tamaño del campo de correo */
     }
 }
-
+/* Media query para pantallas con un ancho máximo de 360px */
 @media (max-width:360px) {
     .logo img{
         width: 54px;
@@ -445,7 +454,7 @@ header.shadow{
         font-size: 0.9rem;
     }
     .btn{
-        padding: 14px 20px;
+        padding: 14px 20px; /* Ajusta el relleno del botón */
     }
 }
 

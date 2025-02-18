@@ -4,72 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive E-Commerce Website Design</title>
-    <!-- Link to CSS -->
+    <title>Responsive E-Commerce Website Design</title> 
+    <!-- Enlace al archivo CSS para el estilo -->
     <link rel="stylesheet" href="style.css">
-    <!-- Fav Icon -->
+     <!-- Enlace al ícono de la página (favicon) -->
     <link rel="shortcut" href="img/logo.png" type="image/x-icon">
-    <!-- Box Icon -->
+    <!-- Enlace a los íconos de Boxicons para iconos de redes sociales y otras funcionalidades -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
 
 </head>
 <body>
+    <!-- Header (Cabecera) con la barra de navegación -->
     <header>
         <div class="nav container">
-            <!--Logo-->
+            <!-- Logo que redirige a la página principal -->
             <a href="#" class="logo">
                 <img src="img/logo.png" alt="">
             </a>
-            <!-- Nav links -->
+            <!-- Lista de enlaces de navegación -->
             <ul class="navbar">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#featured">Featured</a></li>
                 <li><a href="#shop">Shop</a></li>
                 <li><a href="#new">New</a></li>
             </ul>
-             <!-- Icons -->
+            <!-- Iconos de usuario y carrito de compras -->
             <div class="nav-icons">
                 <a href="#" class="user"><i class='bx bxs-user'></i></a>
                 <a href="#" class="cart"><i class='bx bxs-cart'><span>0</span></i></a>
-                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-menu' id="menu-icon"></i> <!-- Ícono para menú móvil -->
             </div>
         </div>
     </header>
-    <!-- Home -->
+    <!-- Sección Home (Inicio) -->
     <section class="home" id="home">
-        <!--Home content-->
         <div class="home-container container">
+            <!-- Texto de bienvenida y llamada a la acción -->
             <div class="home-text">
                 <h1>Winter Collection<br>Light Nylon</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit. Rem, ratione.</p>
                 <!-- Home Button -->
-                <a href="#" class="btn">Buy now</a>
+                <a href="#" class="btn">Buy now</a> <!-- Botón de compra -->
             </div>
-            <!-- Home image-->
+            <!-- Imagen de presentación del producto -->
             <div class="home-img">
                 <img src="img/home.png" alt="">
             </div>
         </div>
     </section>
-    <!-- Featured -->
+    <!-- Sección Featured (Productos Destacados) -->
     <section class="featured" id="featured">
         <!-- Heading -->
         <div class="heading">
-            <h2>Featured <span>Items</span></h2>
+            <h2>Featured <span>Items</span></h2> <!-- Título de la sección -->
         </div>
-        
+        <!-- Contenedor de productos destacados -->
         <div class="featured-container container">
-            <!-- Box 1-->
+            <!-- Caja de producto 1 -->
             <div class="box">
                 <img src="img/featured1.png" alt="">
                 <div class="text">
                     <h2>New Collection <br>Of Shoes</h2>
-                    <a href="#">View More</a>
+                    <a href="#">View More</a> <!-- Enlace a más detalles -->
                 </div>
             </div>
-            <!-- Box 2-->
+            <!-- Caja de producto 2 -->
             <div class="box">
                 <div class="text">
                     <h2>20% Discount <br>On Shoes</h2>
@@ -80,25 +81,28 @@
         </div>
     </section>
 
-    <!-- Shop -->
+    <!-- Sección Shop (Tienda) -->
     <section class="shop" id="shop">
         <div class="heading">
             <h2><span>Shop </span>Now</h2>
         </div>
-        <!-- Shop Content -->
+        <!-- Contenedor de productos disponibles en la tienda -->
         <div class="shop-container container">
+            <!-- Caja de producto 1 -->
             <div class="box">
                 <img src="img/shop1.png" alt="">
                 <h2>Nike Therma</h2>
                 <span>50.99$</span>
-                <a href="#"><i class='bx bx-cart-alt' ></i></a>
+                <a href="#"><i class='bx bx-cart-alt' ></i></a> <!-- Icono de carrito para agregar al carrito -->
             </div>
+            <!-- Más productos en la tienda... -->
             <div class="box">
                 <img src="img/shop2.png" alt="">
                 <h2>Nike Therma</h2>
                 <span>50.99$</span>
                 <a href="#"><i class='bx bx-cart-alt' ></i></a>
             </div> 
+             <!-- Otros productos... -->
             <div class="box">
                 <img src="img/shop3.png" alt="">
                 <h2>Nike Therma</h2>
@@ -125,12 +129,12 @@
             </div>
         </div>
     </section>
-    <!--- New Container-->
+    <!-- Sección New (Nuevas llegadas) -->
     <section class="new" id="new">
         <div class="heading">
             <h2>New <span>Arrival</span></h2>
         </div>
-        <!-- Shop Content -->
+        <!-- Productos nuevos disponibles -->
         <div class="shop-container container">
             <div class="box">
                 <img src="img/new1.png" alt="">
@@ -152,24 +156,26 @@
             </div>
         </div>
     </section>
-    <!--Newsletter-->
+    <!-- Sección de Newsletter (Boletín) -->
     <section class="newsletter container">
         <div class="heading">
             <h2>Subscribe <span>Newsletter</span></h2>
         </div>
+        <!-- Formulario para suscripción al boletín -->
         <form action="">
             <input type="email" name="" id="" placeholder="Enter your email..." class="email-box" required>
             <input type="submit" value="Subscribe" class="btn">
         </form>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (Pie de página) -->
     <section class="footer container">
         <div class="footer-box">
             <a href="#" class="logo">
                 <img src="img/logo.png" alt="">
             </a>
             <div class="social">
+                <!-- Iconos de redes sociales -->
                 <a href="#"><i class='bx bxl-facebook' ></i></a>
                 <a href="#"><i class='bx bxl-twitter' ></i></a>
                 <a href="#"><i class='bx bxl-instagram' ></i></a>
@@ -190,7 +196,7 @@
             <a href="#">Terms Of Use</a>
             <a href="#">Disclaimer</a>
         </div>
-        <div class="fotter-box">
+        <div class="footer-box">
             <h3>Branches</h3>
             <p>México</p>
             <p>Japan</p>
@@ -199,12 +205,12 @@
         </div>
     </section>
 
-    <!-- Copyright -->
+    <!-- Copyright (Derechos de autor) -->
     <div class="copyright">
         <p>&#169; LeonardoOrtiz All Right Reserved. </p>
     </div>
-    <!-- Link To JS -->
-     <script src="main.js"></script>
+    <!-- Enlace al archivo JavaScript para la funcionalidad -->
+    <script src="main.js"></script>
 </body>
 </html>
 
